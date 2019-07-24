@@ -1,0 +1,247 @@
+/* ----introduction------------------------- */
+    .HS_intro{
+        width: 100%;
+        height: 510px;
+        background: linear-gradient(#6d2942bb,#6d2942bb), url(../images/about/intro_bg.jpg) center 65% no-repeat;
+        background-size: 100%, cover;
+        margin-bottom: 300px;
+        text-align: center;
+    }
+    .HS_intro h6{
+        padding: 0 50px;
+        color: #eeeeee;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        letter-spacing: 2px; 
+    }
+/* teacher */
+    .teacher{
+        position: relative;
+        margin-bottom: 120px;
+    }
+    .teacher h4{
+        font-size: 2rem;
+        letter-spacing: 5px;
+        padding: 0 0 48px;
+    }
+    .teacher .xs_title{
+        font-size: 1.1rem;
+        color: #ff80ab;
+        letter-spacing: 2px;
+        margin: 10px;
+    }
+    .teacher_name{
+        display: inline-block;
+        padding: 0 30px 50px;
+    }
+    .teacher_pic{
+        max-width: 300px;
+        display: inline-block;
+        position: relative;
+        top: -150px;
+        z-index: 10;
+    }
+    .teacher_pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* -------teacher now-------------------- */
+    .teacher .now{
+        width: 60%;
+        background: #ff80ab;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding:50px 30px 50px 280px;
+        color: #212121;
+    }
+    .teacher .now li{
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
+    .teacher .teacher_intro{
+        width: 40%;
+        margin: -200px 30px 50px;
+        padding: 50px;
+        background: #484848a8;
+        color: #eeeeee;
+        font-size: 1.1rem;
+        line-height: 2;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 20;text-align: left;
+    }
+    /* -------teacher exp------------------------ */
+    .teacher_exp .pics{
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: flex-start;
+        flex:0 0 70%;
+        position: relative;
+        left:-13%;
+    }
+    .teacher_exp .pics figure{
+        width: 300px;
+        height: 300px;
+        margin: 10px;
+    }
+    .teacher_exp .pics img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .teacher_exp .content{
+        margin-top: -150px;
+        margin-left: -80px;
+        color: #ffffff; 
+        line-height: 2;
+        letter-spacing: 2px;
+        border-left:2px solid #ffffff;
+        padding: 30px;
+    }
+    .teacher_exp .exp_list{
+        margin-bottom: 30px; 
+    }
+    .teacher_exp .note{
+        color: #aaaaaa;
+        font-size: .9rem;
+        padding-left: 30px; 
+    }
+@media screen and (max-width:1024px){
+    .teacher_exp .pics{
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: flex-start;
+        flex:0 0 50%;
+    }
+    .teacher_exp .pics figure{
+        width: 30vw;
+        height: 30vw;
+    }
+    .teacher_exp .pics figure:first-child{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:980px){
+    .teacher_name{
+        display: block;
+        text-align: center;
+        position: relative;
+        top: -220px;
+    }
+    .teacher_pic{
+        position: absolute;
+        top: -120px;
+        left: 15%;
+    }
+    .teacher .now{
+        width: 60%;
+        padding: 50px 30px 50px 150px;
+    }
+    .teacher .teacher_intro{
+        width: 85%;
+        margin: 180px auto 50px;
+    }
+    .teacher_exp .content{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .HS_intro{
+        margin-bottom: 100px;
+        height: 400px;
+    }
+    .teacher_data{
+        text-align: center;
+    }
+    .teacher_name, .teacher_pic, .teacher .now{
+        position: static;
+        margin: 0 auto;
+    }
+    .teacher_pic{
+        width: 70%;
+    }
+    .teacher .now{
+        width: 90%;
+        padding: 50px;
+        margin: -50px auto 30px;
+        text-align: left;
+    }
+    .teacher .now h4{
+        padding: 30px 0;
+    }
+    .teacher .teacher_intro{
+        margin: 20px auto 50px;
+        width: 90%;
+    }
+    .teacher_exp .pics{
+        display: none;
+    }
+    .teacher_exp .content{
+        margin-left: 20px;
+        padding: 20px;
+        letter-spacing: 1px;
+    }
+}
+/* history------------------------- */
+.history{
+    padding:30px 50px;
+    text-align: center;
+    background: linear-gradient(to right, #c94f7c 30%, transparent 30%, transparent 100%);
+    letter-spacing: 1px;
+    color: #eeeeee;
+    line-height: 1.3;
+}
+.history .subtitle{
+    padding-left: 50px;
+}
+.history figure{
+    margin: 50px auto;
+    width: 100%;
+}
+.history figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.history_list{
+    text-align: left;
+    padding-left: calc(25% - 30px);
+    /* width: 70%; */
+}
+.history_list ul li{
+    position: relative;
+    left: 4rem;
+    top: -1.3rem;
+    width: calc(100% - 4rem);
+    margin-bottom: 10px;
+}
+@media screen and (max-width:768px){
+    .history{
+        background: linear-gradient(to right, #c94f7c 20%, transparent 20%, transparent 100%);
+    }
+    .history_list{
+        padding-left: 8%;
+    }
+}
+@media screen and (max-width:576px){
+    .history{
+        padding: 30px 5%;
+    }
+    .history .subtitle{
+        display: inline-block;
+        width: 200px;
+    }
+    .history figure{
+        height: 30vh;
+        margin: 30px auto 50px;
+    }
+    .history_list{
+        padding-left: 0;
+    }
+    .history_list ul li{
+        left: 4.5rem;
+    }
+}

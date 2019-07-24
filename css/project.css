@@ -1,0 +1,216 @@
+/* general */
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* --------------------- */
+.sub_page_header{
+    margin-bottom: 0;
+}
+.page_title h2{
+    right: -35%;
+    width: 300px;
+}
+@media screen and (max-width:529px){
+    .page_title h2{
+        right: -110%;
+        width: 300px;
+    }
+}
+/* ----project------------------------- */
+.project{
+    padding-top: 80px;
+}
+/* ------list tabs---------------------- */
+.dance_list{
+    z-index: 2;
+}
+.dance_list.hidden{
+    /* opacity: 0;
+    z-index: -1; */
+    height: 0;
+    overflow: hidden;
+}
+/* ------dance list---------------------- */
+.dance_list_wrapper{
+    position: relative;
+    padding-top: 80px;
+}
+.dance_list_wrapper .items{
+    width: 100%;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    position: relative;
+}
+.dance_list h6{
+    font-size: 1.1rem;
+    padding: 10px 10px 8px;
+    border: 1px solid #eeeeee;
+    line-height: 1.5;
+}
+.dance_list h5{
+    font-size: 1.2rem;
+    margin: 10px auto;
+    line-height: 1.5;
+}
+.dance_list .box{
+    width: 220px;
+    height: 220px;
+    background: #c94f7c;
+    margin: 10px;
+    box-shadow: #000000 2px 2px 10px; 
+    transition: .5s;  
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.box::after{
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(135deg, transparent 88%, #c94f7c 88%, #c94f7c 100%);
+    z-index: 3;
+}
+.dance_list .box img{
+    transition: .5s;
+    position: relative;
+    z-index: 2;
+}
+
+.dance_list .dance_name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    text-align: center;
+    color: #eeeeee;
+}
+
+/* box hover */
+.dance_list .box:hover img{
+    opacity: 0;
+}
+.box:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(135deg, transparent 0, #c94f7c 0, #c94f7c 100%);
+    z-index: -1;
+}
+/* box active */
+.dance_list .active .box{
+    transform: rotate(45deg);
+    z-index: 10;
+    background: transparent;
+}
+
+.dance_list .active .box img{
+    transform: rotate(-45deg) scale(1.5);
+    z-index: 5;
+}
+.dance_list .active .box:hover img{
+    opacity: 1;
+}
+/* intro box */
+.intro_box{
+    background: #ff80aa73;
+    height: 0;
+    max-width: 100%;
+    position: absolute;
+    transform: translateY(5px);
+    transition: .5s;
+    overflow: hidden;
+}
+.intro_box .intro_content{
+    width: 50%;
+}
+.intro_box .intro_content .words{
+    padding: 70px 20px 20px 50px;
+    color: #eeeeee;
+    letter-spacing: 2px;
+    /* min-height:400px ; */
+}
+.intro_box h6{
+    display: inline-block;
+    padding: 8px 20px 5px;
+    border: none;
+    background: #ff80ab;
+    color: #212121;
+    margin: 0 0 20px;
+}
+.intro_box h3{
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+.intro_box p{
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+.intro_box p.eg_name{
+    color: #ff80ab;
+}
+.intro_box figure{
+    margin: 20px;
+    width: 50%;
+}
+
+.fakebox{
+    width: 100%;
+    height: 0;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+@media screen and (max-width:720px){
+    .intro_box{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .intro_box .intro_content{
+        width: 90%;
+    }
+    .intro_box .intro_content .words{
+        padding: 90px 30px 0px;
+    }
+    .intro_box figure{
+        flex: 1 1 0;
+        width: 90%;
+    }
+}
+@media screen and (max-width:480px){
+    .intro_box .intro_content .words{
+        padding: 100px 30px 0;
+        flex: 0 1 0;
+    }
+    .intro_box figure{
+        width: 100vw;
+        height: 80vw;
+        padding: 30px;
+        margin: 0 auto;
+    }
+    .dance_list .box:hover img{
+        opacity: 1;
+    }
+}
+
+
+
+.fakebox{
+    width: 100%;
+    height: 0;
+    margin: 10px 0;
+    transition: .5s;
+}
